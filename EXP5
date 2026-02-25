@@ -1,0 +1,51 @@
+create table Customer( CustomerID VARCHAR(10) , CustomerName VARCHAR(50), ContactNo number(10), Address VARCHAR(50), City VARCHAR(30), PostalCode VARCHAR(40), Country VARCHAR(30),primary key ( CustomerID ));
+--Create table Orders (OrderID VARCHAR(20), CustomerID VARCHAR(10), EmployeeID VARCHAR(20), OrderDate DATE, ShipperID VARCHAR(10),primary key (OrderID));
+--Create  table Employees(EmployeeID VARCHAR(10),LastName VARCHAR(10), FirstName VARCHAR(20) ,BirthDate date, Photo varchar(10),primary key(EmployeeID));
+--- INSERT INTO Customer VALUES ('C001', 'John Smith', 9876543210, '12 Park Street', 'New York', '10001', 'USA');
+---INSERT INTO Customer VALUES ('C002', 'Alice Brown', 9123456780, '45 Lake View', 'Los Angeles', '90001', 'USA');
+---INSERT INTO Customer VALUES ('C003', 'Michael Johnson', 9988776655, '78 Hill Road', 'Chicago', '60007', 'USA');
+---INSERT INTO Customer VALUES ('C004', 'Emma Wilson', 9871234567, '23 Green Ave', 'London', 'SW1A1AA', 'UK');
+---INSERT INTO Customer VALUES ('C005', 'David Lee', 9012345678, '56 Sunset Blvd', 'Toronto', 'M5H2N2', 'Canada');
+
+--INSERT INTO Employees VALUES ('E001', 'Taylor', 'Robert', TO_DATE('1985-06-15','YYYY-MM-DD'), 'emp1.jpg');
+--INSERT INTO Employees VALUES ('E002', 'Anderson', 'Maria', TO_DATE('1978-03-22','YYYY-MM-DD'), 'emp2.jpg');
+--INSERT INTO Employees VALUES ('E003', 'Thomas', 'James', TO_DATE('1990-11-05','YYYY-MM-DD'), 'emp3.jpg');
+--INSERT INTO Employees VALUES ('E004', 'Jackson', 'Linda', TO_DATE('1982-09-18','YYYY-MM-DD'), 'emp4.jpg');
+--INSERT INTO Employees VALUES ('E005', 'White', 'Daniel', TO_DATE('1975-12-30','YYYY-MM-DD'), 'emp5.jpg');
+
+--INSERT INTO Orders VALUES ('O001', 'C001', 'E001', TO_DATE('2023-01-10','YYYY-MM-DD'), 'S001');
+--INSERT INTO Orders VALUES ('O002', 'C002', 'E003', TO_DATE('2023-02-15','YYYY-MM-DD'), 'S002');
+--INSERT INTO Orders VALUES ('O003', 'C001', 'E002', TO_DATE('2023-03-20','YYYY-MM-DD'), 'S003');
+--INSERT INTO Orders VALUES ('O004', 'C003', 'E004', TO_DATE('2023-04-25','YYYY-MM-DD'), 'S001');
+--INSERT INTO Orders VALUES ('O005', 'C002', 'E005', TO_DATE('2023-05-30','YYYY-MM-DD'), 'S002');
+--select * from Customer order by  CustomerName;
+--SELECT *
+--FROM Orders
+--ORDER BY OrderDate ASC;
+--SELECT *
+--FROM Employees
+--WHERE BirthDate > TO_DATE('1980-12-31','YYYY-MM-DD')
+--ORDER BY BirthDate DESC;
+--SELECT O.*
+--FROM Orders O
+--JOIN Customer C ON O.CustomerID = C.CustomerID
+--WHERE C.Country = 'USA'
+--ORDER BY O.OrderDate DESC;
+--SELECT CustomerID, COUNT(OrderID) AS TotalOrders
+--FROM Orders
+--GROUP BY CustomerID;
+--SELECT CustomerID, COUNT(OrderID) AS TotalOrders
+--FROM Orders
+--GROUP BY CustomerID;
+
+--SELECT City, COUNT(CustomerID) AS TotalCustomers
+--FROM Customer
+--GROUP BY City;
+
+--INSERT INTO Orders 
+--VALUES ('O006', 'C001', 'E003', TO_DATE('2023-06-15','YYYY-MM-DD'), 'S003');
+--select distinct customerid from orders group by customerid having count(orderid)>2;
+---INSERT INTO Customer VALUES ('C006', 'Chris Evans', 9234567890, '90 Madison Ave', 'New York', '10002', 'USA');
+---INSERT INTO Customer VALUES ('C007', 'Sophia Miller', 9345678901, '11 Broadway', 'New York', '10003', 'USA');
+---INSERT INTO Customer VALUES ('C008', 'Daniel Clark', 9456789012, '22 Wall Street', 'New York', '10004', 'USA');
+--select distinct City from customer group by city having count(customerid)>3;
